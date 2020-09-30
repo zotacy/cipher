@@ -1,6 +1,9 @@
 //variables
 let alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-let word;
+let word = prompt ("Enter a word to code", "<word goes here>");
+if (word != null){
+    document.getElementById("word").innerHTML = (`You would like to code ${word}`)
+};
 let codeWord;
 //Function to shuffle array
 function shuffleArray(array) {
@@ -23,9 +26,7 @@ function breakStr(str){
 //Function to create codeword
 function cipher(str){
     breakStr(str);
-    //console.log(strArray)
     codeArray= shuffleArray(alphabet); //shuffles alphabet
-    //console.log(shuffleArray)
     for (let i=0; i < strArray.length; i++){
         for (let j=0; j< codeArray.length-1; j++){ //finds matching value repeats pair
             // console.log(strArray[i]);
